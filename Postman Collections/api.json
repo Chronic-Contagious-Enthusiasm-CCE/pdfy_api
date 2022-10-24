@@ -23,7 +23,7 @@
 						}
 					}
 				},
-				"url": "{{uri}}/render"
+				"url": "pdfyml.herokuapp.com/render"
 			},
 			"response": []
 		}
