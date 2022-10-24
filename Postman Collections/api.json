@@ -1,0 +1,31 @@
+{
+	"info": {
+		"_postman_id": "a36bf68e-6dec-4447-bc5e-1afaa95ff41d",
+		"name": "pdfy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Render PDF of URL",
+			"_postman_id": "81b8efb5-a967-4115-9fe7-885ddd3fd1be",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"url\": \"https://www.google.com/\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{uri}}/render"
+			},
+			"response": []
+		}
+	]
+}
