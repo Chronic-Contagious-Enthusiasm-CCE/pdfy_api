@@ -7,7 +7,7 @@
 	"item": [
 		{
 			"name": "Render PDF of URL",
-			"_postman_id": "81b8efb5-a967-4115-9fe7-885ddd3fd1be",
+			"id": "81b8efb5-a967-4115-9fe7-885ddd3fd1be",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
