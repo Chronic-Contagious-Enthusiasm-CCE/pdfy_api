@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 var validUrl = require('valid-url');
 const cors = require('cors')
 var corsOptions = {
-  origin: [/bizzdom\.netlify\.app$/, /\.bizzdom\.biz$/, /\.businessroadmaps\.biz$/] ,
+  origin: true,
   optionsSuccessStatus: 200,
 };
 
