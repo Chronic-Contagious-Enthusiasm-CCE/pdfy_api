@@ -1,31 +1,103 @@
 {
 	"info": {
-		"_postman_id": "a36bf68e-6dec-4447-bc5e-1afaa95ff41d",
-		"name": "pdfy",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"_postman_id": "96d32f17-ae6b-469f-b7c2-708fb87a1184",
+		"name": "URL to PDF API",
+		"description": "A simple and consistent API to generate PDFs from any web page.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5824253"
 	},
 	"item": [
 		{
-			"name": "Render PDF of URL",
-			"id": "81b8efb5-a967-4115-9fe7-885ddd3fd1be",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"name": "Generate PDF from a page",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"url\": \"https://www.google.com/\"\n}",
+					"raw": "{\n  \"url\": \"https://www.google.com\",\n  \"landscape\": true,\n  \"format\": \"A3\",\n  \"headers\": {\n    \"subdomain.domain.com\": {\n      \"Authorization\": \"Bearer testtoken\"\n    }\n  }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "pdfyml.herokuapp.com/render"
+				"url": {
+					"raw": "pdfyml.herokuapp.com/render",
+					"host": [
+						"pdfyml",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"render"
+					]
+				},
+				"description": "| **param** | **values** |\n| --- | --- |\n| `url` \\* | a link to be rendered |\n| `format` | page format - **\"A4\" /** \"A3\" |\n| `landscape` | orientation - **false /** true |\n| `headers` | a dictionary mapping domains to headers to be passed with the requests - in case the page makes api requests  <br>e.g.  <br>`{   \"subdomain.domain.com\": {   \"Authorization\": \"Bearer testtoken\"   }   }`  <br> |"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Render A3 Landscape",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"url\": \"https://www.google.com\",\n  \"landscape\": true,\n  \"format\": \"A3\",\n  \"headers\": {\n    \"subdomain.domain.com\": {\n      \"Authorization\": \"Bearer testtoken\"\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "pdfyml.herokuapp.com/render",
+							"host": [
+								"pdfyml",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"render"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Basic request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"url\": \"https://www.google.com/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "pdfyml.herokuapp.com/render",
+							"host": [
+								"pdfyml",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"render"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
 		}
 	]
 }
